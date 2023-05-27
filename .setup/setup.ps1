@@ -17,12 +17,14 @@ if (Test-Path $destinationFile) {
 New-Item -ItemType SymbolicLink -Path $destinationFile -Target $sourceFile
 
 # vimrc configuration
-$sourceFile = "$env:USERPROFILE\windows-configuration\vimrc\file\vimrc\.vimrc"
+$sourceFile = "$env:USERPROFILE\Documents\windows-configuration\vimrc\file\vimrc\.vimrc"
+$destinationDir = "$env:USERPROFILE\Documents"
 $destinationFile = "$env:USERPROFILE\.vimrc"
 if (Test-Path $destinationFile) {
     Remove-Item $destinationFile
 }
-New-Item -ItemType SymbolicLink -Path $destinationFile -Target $sourceFile
+New-Item -ItemType Directory -Force -Path $destinationDir | Out-Null
+Copy-Item -Path $sourceFile -Destination $destinationFile -Force
 
 # autohotkey autostart
 $sourceFile = "$env:USERPROFILE\Documents\windows-configuration\auto-hotkey\windows\auto-hotkey\setup.ahk"
