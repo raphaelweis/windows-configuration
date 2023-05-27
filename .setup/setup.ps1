@@ -9,25 +9,25 @@ New-Item -ItemType Directory -Force -Path $destinationDir | Out-Null
 New-Item -ItemType SymbolicLink -Path $destinationFile -Target $sourceFile
 
 # ideavimrc configuration
-$sourceFile = "$env:USERPROFILE\windows-configuration\ideavimrc\default\ideavimrc\.ideavimrc"
+$sourceFile = "$env:USERPROFILE\windows-configuration\ideavimrc\file\ideavimrc\.ideavimrc"
 $destinationFile = "$env:USERPROFILE\.ideavimrc"
 if (Test-Path $destinationFile) {
     Remove-Item $destinationFile
 }
-New-Item -ItemType SymbolicLink -Path $destinationFileIdeavimrc -Target $sourceFileIdeavimrc
+New-Item -ItemType SymbolicLink -Path $destinationFile -Target $sourceFile
 
 # vimrc configuration
-$sourceFile = "$env:USERPROFILE\windows-configuration\vimrc\default\vimrc\.vimrc"
-$destination = "$env:USERPROFILE\.vimrc"
-if (Test-Path $destination) {
-    Remove-Item $destination
+$sourceFile = "$env:USERPROFILE\windows-configuration\vimrc\file\vimrc\.vimrc"
+$destinationFile = "$env:USERPROFILE\.vimrc"
+if (Test-Path $destinationFile) {
+    Remove-Item $destinationFile
 }
-New-Item -ItemType SymbolicLink -Path $destinationFileVimrc -Target $sourceFileVimrc
+New-Item -ItemType SymbolicLink -Path $destinationFile -Target $sourceFile
 
 # autohotkey autostart
 $sourceFile = "$env:USERPROFILE\Documents\windows-configuration\auto-hotkey\windows\auto-hotkey\setup.ahk"
 $destinationDir = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
-$destinationFile = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\setup.ahk"
+$destinationFile = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\setup.lnk"
 if (Test-Path $destinationFile) {
     Remove-Item $destinationFile
 }
