@@ -8,6 +8,25 @@ if (Test-Path $destinationFile) {
 New-Item -ItemType Directory -Force -Path $destinationDir | Out-Null
 New-Item -ItemType SymbolicLink -Path $destinationFile -Target $sourceFile
 
+# Alacritty configuration
+$sourceFile = "$env:USERPROFILE\Documents\windows-configuration\alacritty\windows\alacritty\alacritty.yml"
+$destinationDir = "$env:APPDATA\alacritty"
+$destinationFile = "$env:APPDATA\alacritty\alacritty.yml"
+if (Test-Path $destinationFile) {
+    Remove-Item $destinationFile
+}
+New-Item -ItemType Directory -Force -Path $destinationDir | Out-Null
+New-Item -ItemType SymbolicLink -Path $destinationFile -Target $sourceFile
+
+$sourceFile = "$env:USERPROFILE\Documents\windows-configuration\alacritty\default\alacritty\alacritty.yml"
+$destinationDir = "$env:APPDATA\alacritty\default"
+$destinationFile = "$env:APPDATA\alacritty\default\alacritty.yml"
+if (Test-Path $destinationFile) {
+    Remove-Item $destinationFile
+}
+New-Item -ItemType Directory -Force -Path $destinationDir | Out-Null
+New-Item -ItemType SymbolicLink -Path $destinationFile -Target $sourceFile
+
 # ideavimrc configuration
 $sourceFile = "$env:USERPROFILE\windows-configuration\ideavimrc\file\ideavimrc\.ideavimrc"
 $destinationFile = "$env:USERPROFILE\.ideavimrc"
