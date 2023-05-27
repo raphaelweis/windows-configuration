@@ -5,3 +5,12 @@
 	path = auto-hotkey
 	url = https://github.com/raphaelweis/auto-hotkey.git
 	branch = main
+[submodule "ideavimrc"]
+	path = ideavimrc
+	url = https://github.com/raphaelweis/ideavimrc.git
+[submodule "vimrc"]
+	path = vimrc
+	url = https://github.com/raphaelweis/vimrc.git
+[submodule "powershell"]
+	path = powershell
+	url = https://github.com/raphaelweis/powershell.git
