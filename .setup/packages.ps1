@@ -5,3 +5,4 @@ winget install -e --id Microsoft.PowerShell
 winget install -e --id AutoHotkey.AutoHotkey
 winget install -e --id Lexikos.AutoHotkey
 winget install -e --id Starship.Starship
+winget install -e --id Microsoft.PowerToys
