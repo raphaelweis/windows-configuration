@@ -6,7 +6,6 @@ winget install -e --id AutoHotkey.AutoHotkey
 winget install -e --id Lexikos.AutoHotkey
 winget install -e --id Starship.Starship
 winget install -e --id Microsoft.PowerToys
-winget install -e --id JetBrains.PHPStorm.EarlyAccess
-winget install -e --id JetBrains.WebStorm.EAP
 winget install -e --id ApacheFriends.Xampp.8.2
 winget install -e --id CoreyButler.NVMforWindows
+winget install -e --id JetBrains.Toolbox
