@@ -1,8 +1,12 @@
-winget install -e --id Alacritty.Alacritty
 winget install -e --id Git.Git
 winget install -e --id GitHub.cli
+winget install -e --id Neovim.Neovim.Nightly
 winget install -e --id Microsoft.PowerShell
 winget install -e --id AutoHotkey.AutoHotkey
 winget install -e --id Lexikos.AutoHotkey
 winget install -e --id Starship.Starship
 winget install -e --id Microsoft.PowerToys
+winget install -e --id JetBrains.PHPStorm.EarlyAccess
+winget install -e --id JetBrains.WebStorm.EAP
+winget install -e --id ApacheFriends.Xampp.8.2
+winget install -e --id CoreyButler.NVMforWindows
